@@ -15,8 +15,13 @@ class AdministrationController extends Controller
         $adminstration->password = Hash::make($req->input('password'));
         $adminstration->rePassword = Hash::make($req->input('rePassword'));
         $adminstration->mail = $req->input('mail');
-        $adminstration->save();
-        return response()->json($adminstration);
+        if(Hash::make($req->input('password'))!= Hash::make($req->input('rePassword'))){
+            return "password error";
+        }else{
+            $adminstration->save();
+            return response()->json($adminstration);
+        }
+        
 
     }
     public function index(){
