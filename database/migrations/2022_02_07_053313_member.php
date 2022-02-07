@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-
-class YearMonth extends Migration
+class Member extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +13,12 @@ class YearMonth extends Migration
      */
     public function up()
     {
-        Schema::create('year_months',function(Blueprint $table){
+        Schema::create('members',function(Blueprint $table){
             $table->bigInteger('id');
             $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
-            $table->date('ym_id')->primary();
+            $table->integer('member_id')->primary();
+            $table->string('name');
+            $table->date('monthYear');
 
         });
     }
@@ -29,6 +30,6 @@ class YearMonth extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('year_months');
+        Schema::dropIfExists('members');
     }
 }

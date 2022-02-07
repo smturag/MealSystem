@@ -4,6 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
 class MealStorage extends Migration
 {
     /**
@@ -13,13 +14,16 @@ class MealStorage extends Migration
      */
     public function up()
     {
-        Schema::create('meal_storage', function (Blueprint $table) {
-            $table->integer('id');
+        Schema::create('meal_storages', function (Blueprint $table) {
+            $table->bigInteger('id');
+            $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
             $table->date('ym_id');
-            $table->string('Name');
+            $table->foreign('ym_id')->references('ym_id')->on('year_months')->onDelete('cascade');
+            $table->Integer('member_id');
+            $table->foreign('member_id')->references('member_id')->on('members')->onDelete('cascade');
             $table->date('date');
-            $table->string('meal');
-            
+            $table->integer('meal');
+
         });
     }
 
@@ -30,6 +34,6 @@ class MealStorage extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('meal_storage');
+        Schema::dropIfExists('meal_storages');
     }
 }
