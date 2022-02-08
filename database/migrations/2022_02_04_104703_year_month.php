@@ -15,7 +15,7 @@ class YearMonth extends Migration
     public function up()
     {
         Schema::create('year_months',function(Blueprint $table){
-            $table->bigInteger('id');
+            $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
             $table->date('ym_id')->primary();
 

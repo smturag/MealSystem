@@ -14,9 +14,9 @@ class Amount extends Migration
     public function up()
     {
         Schema::create('amounts',function(Blueprint $table){
-            $table->bigInteger('id');
+            $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
-            $table->integer('member_id');
+            $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('member_id')->on('members')->onDelete('cascade');
             $table->integer('amount');
             $table->date('date');

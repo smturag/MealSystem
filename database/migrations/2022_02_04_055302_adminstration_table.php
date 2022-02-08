@@ -14,7 +14,8 @@ class AdminstrationTable extends Migration
     public function up()
     {
         Schema::create('administrations', function (Blueprint $table) {
-            $table->bigInteger('id')->primary();
+            
+            $table->bigIncrements('id');
             $table->string('userName');
             $table->string('password');
             $table->string('rePassword');

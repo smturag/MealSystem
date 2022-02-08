@@ -24,4 +24,5 @@ class MealStorageController extends Controller
         $data = MealStorage::where('id',$req->id,'date',$req->date)->find();
         return response()->json($data);
     }
-}
+
+    }

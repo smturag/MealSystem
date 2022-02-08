@@ -1,12 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\adminstrationController;
+use App\Http\Controllers\RegistrationController;
 
 
-Route::get('/', function () {
-   
-});
+Route::get('/Registration',[RegistrationController::class,'display']);
 
-
-//Route::post('/registration',[adminstrationController::class,'addData']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

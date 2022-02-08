@@ -23,7 +23,7 @@ class AdministrationController extends Controller
                 'error'=>["Error"]
             ]);
         }
-       
+
     }
     public function index(){
         $data = Adminstration::all();

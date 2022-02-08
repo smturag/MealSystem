@@ -15,8 +15,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/registration',[AdministrationController::class,'addData']);
-Route::post('/ym',[YearMonthController::class,'addData']);
+Route::post('/add_registration',[AdministrationController::class,'addData']);
+Route::post('/add_ym',[YearMonthController::class,'addData']);
 Route::post('/add_meal',[MealStorageController::class,'addData']);
 Route::post('/add_amount',[AmountController::class,'addData']);
 Route::post('/add_member',[MemberController::class,'addData']);

@@ -14,9 +14,9 @@ class Member extends Migration
     public function up()
     {
         Schema::create('members',function(Blueprint $table){
-            $table->bigInteger('id');
+            $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
-            $table->integer('member_id')->primary();
+            $table->bigIncrements('member_id');
             $table->string('name');
             $table->date('monthYear');
 

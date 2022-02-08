@@ -15,11 +15,11 @@ class MealStorage extends Migration
     public function up()
     {
         Schema::create('meal_storages', function (Blueprint $table) {
-            $table->bigInteger('id');
+            $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('administrations')->onDelete('cascade');
             $table->date('ym_id');
             $table->foreign('ym_id')->references('ym_id')->on('year_months')->onDelete('cascade');
-            $table->Integer('member_id');
+            $table->unsignedBigInteger('member_id');
             $table->foreign('member_id')->references('member_id')->on('members')->onDelete('cascade');
             $table->date('date');
             $table->integer('meal');
