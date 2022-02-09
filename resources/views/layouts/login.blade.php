@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registration</title>
+    <title>Document</title>
 </head>
 
 <body style="background-color: rgb(26, 31, 17)">
@@ -19,27 +19,21 @@
                 <h5 class="card-title text-center" style="padding:2px;">Registration</h5>
                 <form>
                     <div class="form-group">
-                        <label>User Name</label>
-                        <input type="text" id="txtWord" class="form-control" placeholder="Enter your username">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" id="mail" class="form-control" placeholder="Enter email">
+
                     </div>
+
                     <div class="form-group">
                         <label>Password</label>
                         <input type="password" id="password" class="form-control" placeholder="Password">
                     </div>
 
-                    <div class="form-group">
-                        <label>RePassword</label>
-                        <input type="password" id="repass" class="form-control"  placeholder="RePassword">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" id="mail" class="form-control" placeholder="Enter email">
-
-                    </div>
                     <div class="text-center">
-                      <button type="submit" onclick="submitForm()" class="btn btn-primary" style="margin-top: 5px; padding:5px">Submit</button>
+                        <button type="submit" onclick="login()" class="btn btn-primary"
+                            style="margin-top: 5px; padding:5px">Submit</button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>
@@ -48,5 +42,3 @@
 </body>
 
 </html>
-
-

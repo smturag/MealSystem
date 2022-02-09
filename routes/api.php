@@ -29,4 +29,4 @@ Route::post('/add_member',[MemberController::class,'addData']);
 // //Route::get('/findAllUser',[FindUserController::class,'index']);
 // Route::get('/findAllUser',[AdministrationController::class,'index']);
 // //Route::get('/findUser',[AdministrationController::class,'login']);
-// Route::get('/login',[AdministrationController::class,'login']);
+Route::get('/login/{mail}&{password}',[AdministrationController::class,'login']);

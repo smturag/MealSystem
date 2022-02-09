@@ -30,13 +30,13 @@ class AdministrationController extends Controller
         return response()->json($data);
     }
 
-    public function login(Request $req){
-        $data = Adminstration::where('userName',$req->userName,)->first();
+    public function login($mail,$password){
+        $data = Adminstration::where('mail',$mail,)->first();
 
-        if( strcmp($req->password, $data->password)===0){
-            return "password error";
-        }else{
+        if( strcmp($password, $data->password)===0){
             return response()->json($data);
+        }else{
+            return "Check again";
         }
            
     }

@@ -5,7 +5,7 @@ function submitForm() {
     let email = document.getElementById("mail").value;
     if (password === rePassword) {
         let data = {
-            id: 4,
+            id: '',
             userName: userName,
             password: password,
             rePassword: rePassword,
@@ -19,6 +19,21 @@ function submitForm() {
             console.log("Request complete! response:", res);
         });
     }else{
-          alert("Check Again")
+          alert("Check Again password")
     }
 }
+
+function login(){
+    let mail = document.getElementById("mail").value;
+    let password = document.getElementById("password").value;
+    
+    
+    if(!mail=='' && !password==''){
+    
+        fetch(`http://127.0.0.1:8000/api/login/${mail}&${password}`).then
+        response=>response.json().then(data=>alert(data))
+        return 
+    }else{
+          alert("Check Again password");
+    }
+    }
