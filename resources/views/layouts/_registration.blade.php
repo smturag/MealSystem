@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <link rel="stylesheet" href="{{ asset('css/reg.css') }}">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/registration.js') }}" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registration</title>
+    @extends('authentication')
+    @section('registration')
 </head>
 
 <body style="background-color: rgb(26, 31, 17)">
@@ -39,7 +31,11 @@
                     <div class="text-center">
                       <button type="button" onclick="submitForm()" class="btn btn-primary" style="margin-top: 5px; padding:5px">Submit</button>
                     </div>
-                    
+                    <div class="text-center p-1">
+                        <a href="{{url('/Login')}}"> <p><u>Already have an account </u></p> </a>
+                        <p id="abc"></p>
+
+                    </div>
                 </form>
             </div>
         </div>
@@ -47,6 +43,6 @@
 
 </body>
 
-</html>
+@endsection
 
 

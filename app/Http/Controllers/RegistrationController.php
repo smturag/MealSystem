@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class RegistrationController extends Controller
 {
     public function display(){
-        return view('layouts.registration');
+        return view('layouts._registration');
     }
 }
