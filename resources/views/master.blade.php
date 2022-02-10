@@ -19,6 +19,10 @@
 
             <div class="Container">
                 @yield('login')
+                @yield('profile')
+                @yield('add_member')
+                @yield('_viewChart')
+                @yield('_addSheet')
             </div>
 
         </div>

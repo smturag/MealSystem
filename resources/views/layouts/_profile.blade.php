@@ -1,5 +1,5 @@
 @extends('master')
-@section('layouts._view')
+@section('profile')
 
 <div class="Container">
       <div class="card" style="width: 18rem;">
