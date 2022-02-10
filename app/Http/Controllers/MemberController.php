@@ -26,4 +26,8 @@ class MemberController extends Controller
         $data = Member::where('id',$req->id,'date',$req->date)->find();
         return response()->json($data);
     }
+
+    public function add_member(){
+        return view('layouts._addMember');
+    }
 }

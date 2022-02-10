@@ -25,4 +25,11 @@ class MealStorageController extends Controller
         return response()->json($data);
     }
 
+    public function add_sheet(){
+        return view('layouts._addMealSheet');
+    }
+    public function view_sheet(){
+        return view('layouts._viewMealChart');
+    }
+
     }

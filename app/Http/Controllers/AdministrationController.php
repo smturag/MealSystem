@@ -40,4 +40,13 @@ class AdministrationController extends Controller
         }
            
     }
+
+    public function profile(){
+        return view('layouts._profile');
+    }
+
+    public function master(){
+        return view('master');
+    }
+
 }

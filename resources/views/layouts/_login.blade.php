@@ -13,7 +13,7 @@
                         <input type="email" id="mail" class="form-control" placeholder="Enter email">
                     </div>
                     <div class="form-group">
-                        <label>Passwor bh</label>d</label>
+                        <label>Password</label>d</label>
                         <input type="password" id="password" class="form-control" placeholder="Password">
                     </div>
                     <div class="text-center">
