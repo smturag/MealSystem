@@ -37,7 +37,7 @@
 
                     </div>
                     <div class="text-center">
-                      <button type="submit" onclick="submitForm()" class="btn btn-primary" style="margin-top: 5px; padding:5px">Submit</button>
+                      <button type="button" onclick="submitForm()" class="btn btn-primary" style="margin-top: 5px; padding:5px">Submit</button>
                     </div>
                     
                 </form>

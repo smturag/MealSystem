@@ -23,17 +23,25 @@ function submitForm() {
     }
 }
 
-function login(){
+async function login(){
     let mail = document.getElementById("mail").value;
     let password = document.getElementById("password").value;
+    //document.getElementById('abc').innerHTML= mail
+    http://127.0.0.1:8000/api/login/turag.shagor01@gmail.com&2121
     
-    
-    if(!mail=='' && !password==''){
-    
-        fetch(`http://127.0.0.1:8000/api/login/${mail}&${password}`).then
-        response=>response.json().then(data=>alert(data))
-        return 
-    }else{
+    if(!mail=='' && !password==''){ 
+        
+        try {
+            await fetch(`http://127.0.0.1:8000/api/login/${mail}&${password}`)
+        .then(response => response.json()).then(data=>console.log(data))
+            
+        } catch (error) {
+           if(error)
+           document.getElementById('abc').innerHTML= "Email or Password doesn't match";
+        }
+        
+        
+    }else{ 
           alert("Check Again password");
     }
     }

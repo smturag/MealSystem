@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LoginController extends Controller
+class MainController extends Controller
 {
     public function display(){
-        return view('layouts._login');
+        return view('master');
     }
 }
